@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHEELS</title>
+    <link rel="icon" href="https://i.imgur.com/qiVPOx4.jpeg" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Header/Navigation -->
+<header>
+    <div class="logo">
+        <img src="https://i.imgur.com/qiVPOx4.jpeg" alt="Wheels Logo" id="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bikes">Bicicletas</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li>
+                <a href="#" id="user-area">
+                    <i class="fas fa-user"></i>
+                    <span id="user-text">Minha Conta</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <img src="https://i.imgur.com/qiVPOx4.jpeg" alt="Logo Wheels" class="hero-logo">
+        <h1>Sua mobilidade mais fácil e sustentável</h1>
+        <p>Alugue bicicletas de alta qualidade com apenas alguns cliques e aproveite a liberdade sobre duas rodas.</p>
+        <div class="hero-buttons">
+            <a href="#bikes" class="btn btn-primary">Alugue Agora</a>
+            <a href="#" class="btn btn-outline" id="learn-more-btn">Saiba Mais</a>
+        </div>
+    </div>
+</section>
+
+<!-- Bikes Section -->
+<section class="container" id="bikes">
+    <h2 class="section-title">Nossas Bicicletas</h2>
+    <div class="bike-filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="urbanas">Urbanas</button>
+        <button class="filter-btn" data-filter="esportivas">Esportivas</button>
+        <button class="filter-btn" data-filter="montanha">Montanha</button>
+    </div>
+    <div class="bikes" id="bikes-container">
+        <!-- Bicicletas serão carregadas dinamicamente via JavaScript -->
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="https://i.imgur.com/qiVPOx4.jpeg" alt="Equipe Wheels">
+            </div>
+            <div class="about-text">
+                <h3>Nossa Missão</h3>
+                <p>A Wheels nasceu com o propósito de transformar a mobilidade urbana, oferecendo uma alternativa ecológica, econômica e saudável para o transporte no seu dia a dia.</p>
+                <p>Nossa plataforma conecta você às melhores bicicletas da cidade, com um processo de aluguel simples e transparente. Acreditamos que cada pedalada contribui para um mundo mais limpo e sustentável.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">1.2k+</span>
+                        <span class="stat-label">Bicicletas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Locais</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">Como Funciona</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">1</div>
+                <h3>Crie sua conta</h3>
+                <p>Registre-se em nosso sistema e complete seu cadastro.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">2</div>
+                <h3>Escolha sua bike</h3>
+                <p>Selecione a bicicleta perfeita para sua necessidade.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <h3>Reserve e aproveite</h3>
+                <p>Finalize o pagamento e comece a pedalar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Wheels</h3>
+            <p>Revolucionando a mobilidade urbana com soluções sustentáveis e acessíveis.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#bikes">Bicicletas</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Visconde do Rio Branco - Centro, Niterói - RJ</p>
+            <p><i class="fas fa-phone"></i> (21) 98765-4321</p>
+            <p><i class="fas fa-envelope"></i> contato@wheels.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Wheels. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<!-- Auth Modal -->
+<div class="modal" id="auth-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="auth-tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="register">Cadastro</button>
+        </div>
+
+        <div class="tab-content active" id="login-tab">
+            <h2>Bem-vindo de volta!</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Digite seu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span id="login-text">Entrar</span>
+                    <span id="login-spinner" class="loading" style="display: none;"></span>
+                </button>
+            </form>
+            <div class="auth-footer">
+                <p>Não tem uma conta? <a href="#" class="switch-tab" data-tab="register">Cadastre-se</a></p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="register-tab">
+            <h2>Crie sua conta</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nome Completo</label>
+                    <input type="text" id="register-name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="Digite seu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha</label>
+                    <input type="password" id="register-password" placeholder="Crie uma senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirme sua Senha</label>
+                    <input type="password" id="register-confirm-password" placeholder="Repita sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span id="register-text">Cadastrar</span>
+                    <span id="register-spinner" class="loading" style="display: none;"></span>
+                </button>
+            </form>
+            <div class="auth-footer">
+                <p>Já tem uma conta? <a href="#" class="switch-tab" data-tab="login">Faça login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bike Details Modal -->
+<div class="modal" id="bike-modal">
+    <div class="modal-content bike-modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="bike-modal-container">
+            <div class="bike-modal-images">
+                <div class="main-image" id="bike-main-image"></div>
+                <div class="thumbnail-container" id="bike-thumbnails"></div>
+            </div>
+            <div class="bike-modal-info">
+                <h2 id="bike-modal-name"></h2>
+                <div class="bike-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span id="bike-modal-reviews">42 avaliações</span>
+                </div>
+                <p class="bike-modal-description" id="bike-modal-description"></p>
+                <div class="bike-specs">
+                    <h3>Especificações</h3>
+                    <ul id="bike-modal-specs"></ul>
+                </div>
+                <div class="bike-pricing">
+                    <h3>Preço de Aluguel</h3>
+                    <div class="price-options">
+                        <div class="price-option active" data-days="1">
+                            <span class="days">1 dia</span>
+                            <span class="price">R$ <span id="price-1day">10</span></span>
+                        </div>
+                        <div class="price-option" data-days="7">
+                            <span class="days">7 dias</span>
+                            <span class="price">R$ <span id="price-7day">70</span></span>
+                        </div>
+                        <div class="price-option" data-days="30">
+                            <span class="days">30 dias</span>
+                            <span class="price">R$ <span id="price-30day">300</span></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block" id="rent-bike-btn">
+                    <i class="fas fa-bicycle"></i> Alugar Agora
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkout-modal">
+    <div class="modal-content checkout-modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="checkout-steps">
+            <div class="step active" data-step="1">
+                <span class="step-number">1</span>
+                <span class="step-title">Resumo</span>
+            </div>
+            <div class="step" data-step="2">
+                <span class="step-number">2</span>
+                <span class="step-title">Pagamento</span>
+            </div>
+            <div class="step" data-step="3">
+                <span class="step-number">3</span>
+                <span class="step-title">Confirmação</span>
+            </div>
+        </div>
+
+        <div class="checkout-step-content active" data-step="1">
+            <h2>Resumo do Aluguel</h2>
+            <div class="checkout-summary">
+                <div class="checkout-bike">
+                    <div class="checkout-bike-img" id="checkout-bike-img"></div>
+                    <div>
+                        <h3 id="checkout-bike-name"></h3>
+                        <p id="checkout-bike-type"></p>
+                    </div>
+                </div>
+                <div class="checkout-details">
+                    <h3>Detalhes do Aluguel</h3>
+                    <div class="detail-row">
+                        <span>Data de Início:</span>
+                        <span id="checkout-start-date">Hoje</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Data de Término:</span>
+                        <span id="checkout-end-date">Amanhã</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Duração:</span>
+                        <span id="checkout-duration">1 dia</span>
+                    </div>
+                    <div class="detail-row total">
+                        <span>Valor Total:</span>
+                        <span>R$ <span id="checkout-total">50,00</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-actions">
+                <button class="btn btn-outline" id="back-to-bike-btn">Voltar</button>
+                <button class="btn btn-primary" id="proceed-to-payment-btn">Continuar</button>
+            </div>
+        </div>
+
+        <div class="checkout-step-content" data-step="2">
+            <h2>Pagamento</h2>
+            <div class="payment-methods">
+                <div class="payment-method active">
+                    <input type="radio" name="payment-method" id="credit-card" checked>
+                    <label for="credit-card">
+                        <i class="far fa-credit-card"></i> Cartão de Crédito
+                    </label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" name="payment-method" id="pix">
+                    <label for="pix">
+                        <i class="fas fa-qrcode"></i> PIX
+                    </label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" name="payment-method" id="boleto">
+                    <label for="boleto">
+                        <i class="fas fa-barcode"></i> Boleto
+                    </label>
+                </div>
+            </div>
+
+            <div class="payment-form" id="credit-card-form">
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nome no Cartão</label>
+                    <input type="text" id="card-name" placeholder="Nome como no cartão">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-expiry">Validade</label>
+                        <input type="text" id="card-expiry" placeholder="MM/AA">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvv">CVV</label>
+                        <input type="text" id="card-cvv" placeholder="123">
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-form" id="pix-form" style="display: none;">
+                <p>Após confirmar o pedido, você receberá um QR Code para pagamento via PIX.</p>
+            </div>
+
+            <div class="payment-form" id="boleto-form" style="display: none;">
+                <p>Após confirmar o pedido, você receberá um boleto bancário para pagamento.</p>
+            </div>
+
+            <div class="checkout-actions">
+                <button class="btn btn-outline" id="back-to-summary-btn">Voltar</button>
+                <button class="btn btn-primary" id="confirm-payment-btn">
+                    <span id="payment-text">Confirmar Pagamento</span>
+                    <span id="payment-spinner" class="loading" style="display: none;"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="checkout-step-content" data-step="3">
+            <div class="confirmation-message">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Reserva Confirmada!</h2>
+                <p>Sua reserva foi confirmada com sucesso. Você receberá um e-mail com todos os detalhes.</p>
+                <div class="confirmation-details">
+                    <p><strong>Código da Reserva:</strong> <span id="confirmation-code">WH20230001</span></p>
+                    <p><strong>Bicicleta:</strong> <span id="confirmation-bike">Caloi Speed Pro</span></p>
+                    <p><strong>Período:</strong> <span id="confirmation-period">01/01/2023 - 02/01/2023</span></p>
+                    <p><strong>Local de Retirada:</strong> <span id="confirmation-location">Estação Central</span></p>
+                </div>
+                <button class="btn btn-primary" id="finish-checkout-btn">Concluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
